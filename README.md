@@ -2,8 +2,8 @@
 
 > **I built my own real-time render engine inside TouchDesigner — custom NVIDIA OptiX + CUDA C++ with AI ray reconstruction.**
 
-<!-- Drop a looping screen-capture of the live moving viewport here. -->
-![hero](assets/hero.gif)
+<!-- TODO: add a looping screen-capture of the live moving viewport here:  ![hero](assets/hero.gif) -->
+**[▶ Download & run it (Releases)](https://github.com/terezbe/td-optix/releases/latest)** · MIT · Windows + NVIDIA RTX + TouchDesigner
 
 **PT_Render** is a real-time, physically-based **path tracer** that runs as a native **C++ TOP** inside [TouchDesigner](https://derivative.ca). It traces real light — soft shadows, glass refraction, mirror reflections, emissive geometry and volumetric fog — and reconstructs a clean image every frame with **NVIDIA DLSS Ray Reconstruction**, so it stays interactive instead of waiting on an offline render.
 
