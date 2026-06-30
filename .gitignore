@@ -1,0 +1,27 @@
+# Build outputs
+**/Release/
+**/Debug/
+**/x64/
+**/*.dll
+**/*.lib
+**/*.exp
+**/*.obj
+**/*.pdb
+**/*.ptx
+# Runtime bundle (built/staged, or shipped via a Release — not committed)
+/examples/bin/
+/dist/
+# NVIDIA SDKs — install locally; not redistributed (see THIRD-PARTY-NOTICES.md)
+/phase2/optix-dev/
+/phase2/DLSS/
+# TouchDesigner backups / locks / numbered save-twins
+/Backup/
+*.toe.lock
+**/*.[0-9]*.toe
+# Captures / media / OS cruft
+**/*.png
+**/*.mov
+**/*.exr
+**/__pycache__/
+Thumbs.db
+.DS_Store
