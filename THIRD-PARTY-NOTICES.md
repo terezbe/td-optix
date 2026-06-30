@@ -18,13 +18,19 @@ example projects).
 - Get it: <https://developer.nvidia.com/rtx/ray-tracing/optix>
 
 ## NVIDIA DLSS — Ray Reconstruction (NGX)
-- **Use:** optional AI denoiser/upscaler. The runtime DLL (`nvngx_dlssd.dll`) is **not
-  bundled** here. To enable DLSS-RR, download it from NVIDIA and place it beside the plugin.
-- **License:** NVIDIA DLSS SDK License / NVIDIA RTX SDKs License. Redistribution requires
-  NVIDIA's attribution and (for commercial products) pre-release notification.
-- Get it: <https://github.com/NVIDIA/DLSS>
-- **Attribution (when you redistribute the DLL):** "This software contains source code
-  provided by NVIDIA Corporation." plus the NVIDIA DLSS logo/credit per the DLSS SDK terms.
+- **Use:** AI denoiser/upscaler. The runtime DLL **`nvngx_dlssd.dll` is bundled in the Release
+  build** (the renderer's default denoiser); the graceful fallback uses the OptiX denoiser when
+  DLSS is unavailable. It is shipped **unmodified and NVIDIA-signed**.
+- **Ownership / license:** `nvngx_dlssd.dll` is **© NVIDIA Corporation**, provided under the
+  **NVIDIA DLSS SDK License / NVIDIA RTX SDKs License** — it is **NOT** covered by this project's
+  MIT license and may not be modified, reverse-engineered, or resold on its own.
+- **Required attribution:** *"This software contains NVIDIA DLSS technology"* / *"This software
+  contains source code provided by NVIDIA Corporation."* (also stated in the README and the
+  release `HOW-TO-RUN.txt`).
+- **Commercial use:** if this were shipped commercially, NVIDIA requires pre-release notification
+  (<https://developer.nvidia.com/sw-notification>) and a registered NGX App ID. This is a
+  **non-commercial** project, so those obligations do not apply; the in-code NGX id is an R&D UUID.
+- Source / updates of the DLL: <https://github.com/NVIDIA/DLSS>
 
 ## NVIDIA CUDA Toolkit (12.8)
 - **Use:** device kernels + the CUDA runtime. `cudart64_12.dll` **is** redistributable under

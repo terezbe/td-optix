@@ -34,7 +34,7 @@ It's wrapped in a single drop-in COMP (**`PT_Render`**) with a clean parameter U
 | Host | TouchDesigner **2025.32820+** (C++ TOP, CUDA execute mode) |
 | Bundled runtime | `cudart64_12.dll` (CUDA EULA redistributable) |
 
-> **DLSS is optional and not bundled.** The default denoiser is the OptiX AI denoiser (ships in the driver). To use DLSS-RR, drop your own NVIDIA-supplied `nvngx_dlssd.dll` next to the plugin. See [`THIRD-PARTY-NOTICES.md`](THIRD-PARTY-NOTICES.md).
+> **DLSS Ray Reconstruction is included** in the [Release](https://github.com/terezbe/td-optix/releases/latest) build (`nvngx_dlssd.dll`) and used by default; if the driver is too old it auto-falls back to the OptiX AI denoiser. The bundled `nvngx_dlssd.dll` is **NVIDIA's unmodified redistributable, © NVIDIA Corporation**, provided under the NVIDIA DLSS SDK license — **not** covered by this project's MIT license. *This software contains NVIDIA DLSS technology.* See [`THIRD-PARTY-NOTICES.md`](THIRD-PARTY-NOTICES.md).
 
 ---
 
